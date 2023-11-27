@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_APP_API_URL;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -24,7 +25,7 @@ export default function Login() {
     formData.append('email', email);
     formData.append('password', password);
 
-    await axios.post('http://laravel.api.devel:8081/api/auth/login', formData).then((response) => {
+    await axios.post(apiUrl+'/api/auth/login', formData).then((response) => {
       localStorage.setItem('token', response.data.access_token);
       navigate('/dashboard');
     }).catch((error) => {
@@ -87,7 +88,7 @@ export default function Login() {
                         <button className="btn btn-primary px-4" type="submit">Login</button>
                       </div>
                       <div className="col-6 text-end">
-                        <Link to={"/"} className="btn btn-link px-0" type="button">Home?</Link>
+                        <Link to={"/"} className="btn btn-link px-0" type="button">Forgot Password?</Link>
                       </div>
                     </div>
                   </div>
