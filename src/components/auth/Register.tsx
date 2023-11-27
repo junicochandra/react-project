@@ -3,15 +3,14 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
   // Validation
-  const [validation, setValidation] = useState([]);
-
-  const navigate = useNavigate();
+  const [validation, setValidation] = useState({ name: '', email: '', password:'' });
 
   // Middleware
   useEffect(() => {
@@ -20,7 +19,7 @@ export default function Register() {
     }
   }, []);
 
-  const registerHandler = async (e) => {
+  const registerHandler = async (e: any) => {
     e.preventDefault();   
 
     const formData = new FormData();

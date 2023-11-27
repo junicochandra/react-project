@@ -3,13 +3,12 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  
   // Validation
-  const [validation, setValidation] = useState([]);
-
-  const navigate = useNavigate();
+  const [validation, setValidation] = useState({ error: '', email: '', password:'' });
 
   // Middleware
   useEffect(() => {
@@ -18,8 +17,8 @@ export default function Login() {
     }
   }, []);
 
-  const loginHandler = async (e) => {
-    e.preventDefault();   
+  const loginHandler = async (e: any) => {
+    e.preventDefault();
 
     const formData = new FormData();
     formData.append('email', email);
