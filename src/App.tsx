@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import Welcome from "./pages/Welcome"
 import Login from "./components/auth/Login"
 import Register from "./components/auth/Register"
-import Dashboard from "./pages/Dashboard"
+import Dashboard from "./components/dashboard/Dashboard"
 
 export default function App() {
   return (

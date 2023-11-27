@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({name: ''});
   const navigate = useNavigate();
 
   // token
