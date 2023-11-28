@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
-  const [user, setUser] = useState({name: ''});
+  const [user, setUser] = useState({ name: '' });
   const navigate = useNavigate();
 
   // token
@@ -18,7 +18,7 @@ export default function Dashboard() {
 
   // Middleware
   useEffect(() => {
-    if(!token){
+    if (!token) {
       navigate('/login');
     }
 
