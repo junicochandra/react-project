@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
+import Template from "../layout/Template";
 
 export default function Dashboard() {
   const [user, setUser] = useState({ name: '' });
@@ -34,9 +35,20 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
-      <h1>Hi, "{user.name}"</h1>
-      <button onClick={logoutHandler} className="btn btn-danger">Logout</button>
-    </div>
+    <Template>
+      <div className="container-lg">
+        <div className="row">
+          <div className="col-12">
+            <div className="card mb-4">
+              <div className="card-header"><strong>Dashboard</strong></div>
+              <div className="card-body">
+                <h1>Hi, "{user.name}"</h1>
+                <button onClick={logoutHandler} className="btn btn-danger">Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Template>
   )
 }
