@@ -106,12 +106,11 @@ export default function Header({ onToggleSidebar }: HeaderProps) {
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb my-0 ms-2">
             <li className="breadcrumb-item">
-              {/* if breadcrumb is single*/}<a href="#">Home</a>
+              <a href="/dashboard" className="text-decoration-none">Home</a>
             </li>
             <li className="breadcrumb-item">
-              {/* if breadcrumb is single*/}<a href="#">Theme</a>
+              <span>Dashboard</span>
             </li>
-            <li className="breadcrumb-item active"><span>Colors</span></li>
           </ol>
         </nav>
       </div>

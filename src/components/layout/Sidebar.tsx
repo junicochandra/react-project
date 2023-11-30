@@ -22,24 +22,36 @@ export default function Sidebar({ isHide }: SidebarProp) {
             Dashboard
           </a>
         </li>
-        <li className="nav-title">Theme</li>
+        <li className="nav-title">Master</li>
         <li className="nav-item">
-          <a className="nav-link active" href="#">
+          <a className="nav-link" href="/tag">
             <svg className="nav-icon">
-              <use xlinkHref="node_modules/@coreui/icons/sprites/free.svg#cil-pencil" />
+              <use xlinkHref="node_modules/@coreui/icons/sprites/free.svg#cil-check" />
             </svg>
-            Typography
+            Tag
           </a>
         </li>
         <li className="nav-divider" />
-        <li className="nav-title">Extras</li>
+        <li className="nav-title">Feature</li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="/email">
             <svg className="nav-icon">
               <use xlinkHref="node_modules/@coreui/icons/sprites/free.svg#cil-pencil" />
             </svg>
-            Typography
+            Email
           </a>
+        </li>
+        <li className="nav-group">
+          <a className="nav-link nav-group-toggle" href="#">
+            <svg className="nav-icon">
+              <use xlinkHref="node_modules/@coreui/icons/sprites/free.svg#cil-user"></use>
+            </svg>
+            User
+          </a>
+          <ul className="nav-group-items">
+            <li className="nav-item"><a className="nav-link" href="#"><span className="nav-icon"></span>Menu 1</a></li>
+            <li className="nav-item"><a className="nav-link" href="#"><span className="nav-icon"></span>Menu 2</a></li>
+          </ul>
         </li>
         <li className="nav-item mt-auto">
           <a className="nav-link" href="https://coreui.io/docs/templates/installation/" target="_blank">

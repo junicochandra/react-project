@@ -15,7 +15,7 @@ export default function Template({ children }: TemplateProps) {
   };
 
   return (
-    <div>
+    <>
       <Sidebar isHide={isHide}></Sidebar>
       <div className="wrapper d-flex flex-column min-vh-100 bg-light">
         <Header onToggleSidebar={toggleSidebar}></Header>
@@ -24,6 +24,6 @@ export default function Template({ children }: TemplateProps) {
         </div>
         <Footer></Footer>
       </div>
-    </div>
+    </>
   );
 }
