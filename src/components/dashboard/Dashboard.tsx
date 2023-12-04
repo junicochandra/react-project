@@ -1,8 +1,8 @@
-import AuthService from "../../services/AuthService";
+import { useAuth } from "../../provider/AuthProvider";
 import Template from "../layout/Template";
 
 export default function Dashboard() {
-  const { user } = AuthService();
+  const { user } = useAuth();
 
   return (
     <Template>

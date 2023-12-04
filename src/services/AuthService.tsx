@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function AuthService() {
-  const [user, setUser] = useState({ name: '', email: '' });
+  const [user, setUser] = useState({ name: '', email: '', role: ''});
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
   const apiUrl = import.meta.env.VITE_APP_API_URL;

@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import AuthService from "../../services/AuthService";
+import { useAuth } from "../../provider/AuthProvider";
 
 interface HeaderProps {
   onToggleSidebar: () => void;
 }
 
 export default function Header({ onToggleSidebar }: HeaderProps) {
-  const { user } = AuthService();
+  const { user } = useAuth();
   const navigate = useNavigate();
 
   // token
