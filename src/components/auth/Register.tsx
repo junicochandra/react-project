@@ -29,7 +29,7 @@ export default function Register() {
     formData.append('password', password);
     formData.append('password_confirmation', passwordConfirmation);
 
-    await axios.post(apiUrl+'/api/auth/register', formData).then(() => {
+    await axios.post(apiUrl + '/api/auth/register', formData).then(() => {
       navigate('/login');
     }).catch((error) => {
       setValidation(error.response.data);
